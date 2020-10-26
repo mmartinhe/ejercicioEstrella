@@ -2,6 +2,8 @@
 package ejercicioestrella;
 
 
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import javax.swing.JFrame;
 import java.awt.event.WindowEvent;
 import java.awt.event.WindowStateListener;
@@ -11,7 +13,7 @@ import java.awt.event.WindowStateListener;
  *
  * @author mmartinh
  */
-public class Controlador implements WindowStateListener{
+public class Controlador implements WindowStateListener, MouseListener{
     
     private Vista vista;
     
@@ -28,4 +30,30 @@ public class Controlador implements WindowStateListener{
         }
         
       }
+
+    @Override
+
+    public void mouseEntered(MouseEvent e) {
+        vista.setEstrellaRoja();
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        vista.setEstrellaAmarilla();
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        System.out.println();
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        System.out.println();
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        System.out.println();
+    }
 }
